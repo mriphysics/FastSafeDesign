@@ -150,9 +150,9 @@ $$
 f_{spiral}(t_n) = \dfrac{\gamma{}\|g\|}{2\pi{}r(t_n)}
 $$
 
-whenever $f_{spiral}$ reaches the upper frequency of a forbidden band, the gradient amplitude is brought down to $\dfrac{2\pi{}r(t_n)f_{lower}}{\gamma}$ where $f_{lower}$ is the lower frequency of the forbidden band. This forces the spiral frequency to jump across the band.
+whenever $f_{spiral}$ reaches the upper frequency of a forbidden band, the gradient amplitude is brought down to $2\pi{}r(t_n)f_{lower}/\gamma$ where $f_{lower}$ is the lower frequency of the forbidden band. This forces the spiral frequency to jump across the band.
 
-In the proposed algorithm the gradient amplitude cannot be immediately reduced to that amplitude without violating the slew rate. So at each time-step the gradient amplitude is brought down to the largest value between $\dfrac{2\pi{}r(t_n)f_{lower}}{\gamma}$ and $g_{min}$. 
+In the proposed algorithm the gradient amplitude cannot be immediately reduced to that amplitude without violating the slew rate. So at each time-step the gradient amplitude is brought down to the largest value between $2\pi{}r(t_n)f_{lower}/\gamma$ and $g_{min}$. 
 
 $g_{min}$ is the lowest possible gradient amplitude that can be used without violating the slew rate and is calculated as follows. 
 
@@ -173,7 +173,7 @@ $$
 For the gradient amplitude:
 
 $$
-|g(t_{n+1})|=\dfrac{\cdot{r}(t_{n+1})}{\gamma}\sqrt{1+\left(\dfrac{2\pi{}F(t_{n+1})r(t_{n+1})}{N}\right)^2}
+|g(t_{n+1})|=\dfrac{\dot{r}(t_{n+1})}{\gamma}\sqrt{1+\left(\dfrac{2\pi{}F(t_{n+1})r(t_{n+1})}{N}\right)^2}
 $$
 
 Replacing the previous equation and assuming $F(t_{n+1})\approx{}F(t_n)$
