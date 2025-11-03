@@ -22,7 +22,7 @@ $\quad{}g(t)=g_x(t)+ig_y(t)$ is the complex gradient waveform (G/cm)
 Deriving the previous equation we get:
 
 $$
-g(t) = -\dfrac{1}{\gamma}\dot{k}(t) = -\dfrac{1}{\gamma} \left(r_1e^{iq_0} + ir_0q_1e^{iq_0} \right)
+g(t) = -\dfrac{1}{\gamma}\dot{k}(t) = -\dfrac{1}{\gamma} \left(\dot{r}e^{i\theta} + ir\dot{\theta}e^{i\theta} \right)
 $$
 
 and deriving again we obtain the complex slew rate (G/cm/s):
@@ -40,11 +40,11 @@ $$
 which results in
 
 $$
-\dot{\theta} = \dfrac{2\pi F}{N} r_1 
+\dot{\theta} = \dfrac{2\pi F}{N} \dot{r} 
 $$
 
 $$
-\ddot{\theta} = \dfrac{2\pi \frac{dF}{dr}}{N} r_1^2 + \dfrac{2\pi F}{N} r_2 
+\ddot{\theta} = \dfrac{2\pi \frac{dF}{dr}}{N} \dot{r}^2 + \dfrac{2\pi F}{N} \ddot{r} 
 $$
 
 The two equations above can be used to rewrite expressions for $g(t)$ and $s(t)$ solely as a function of $\dot{r}$ and $\ddot{r}$.
@@ -183,7 +183,7 @@ $$
 $$
 
 where $\ddot{r}$ is determined by solving the quadratic equation as slew is assumed to be the limiting factor.
-**Note that the quadratic equation solved to find $\ddot{r}$$ returns two solutions. The smallest corresponds to a decrease in radial velocity and therefore gradient amplitude and is the one that should be used here:**
+**Note that the quadratic equation solved to find $\ddot{r}$ returns two solutions. The smallest corresponds to a decrease in radial velocity and therefore gradient amplitude and is the one that should be used here:**
 
 $$
 g_{min} = \dfrac{\dot{r}+\ddot{r}T}{\gamma}\sqrt{1+\left(\dfrac{2\pi{}F\left(r+\dot{r}T+\ddot{r}T^2\right)}{N}\right)^2}
